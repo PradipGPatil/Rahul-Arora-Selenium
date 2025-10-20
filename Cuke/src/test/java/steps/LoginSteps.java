@@ -20,13 +20,16 @@ public class LoginSteps {
 
 	}
 
-	@Then("user enter username")
-	public void user_enter_username() {
-
+	@Then("user enter {string} username")
+	public void user_enter_username(String username) {
+		System.out.println(username);
 	}
 
-	@And("user enter password")
-	public void user_enter_password() {
+	// notice we have used string as small
+	//All placeholders are lowercase.
+	@And("user enter {string} password")
+	public void user_enter_password(String password) {
+		System.out.println(password);
 
 	}
 
