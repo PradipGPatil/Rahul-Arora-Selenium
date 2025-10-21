@@ -5,7 +5,8 @@ import io.cucumber.testng.CucumberOptions;
 
 // add the tage
 @CucumberOptions(features = "src/test/resources/feature/", glue= {"steps"}, 
-tags = "@dev or @stag and not @prod ",
+//tags = "@dev or @stag and not @prod ",
+tags="@datatable",
 plugin = {"html:target/cucumber-report/cucumber-html-report.html","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"})
 public class RunCuke extends AbstractTestNGCucumberTests{
 	
