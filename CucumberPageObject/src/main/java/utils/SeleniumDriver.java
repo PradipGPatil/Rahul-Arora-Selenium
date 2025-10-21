@@ -32,4 +32,24 @@ public class SeleniumDriver {
 	public static void openPage(String url) {
 		driver.get(url);
 	}
+	
+	public static WebDriver getDriver() {
+		return driver;
+	}
+	
+	public static void setUpDriver() {
+		
+		if(driver==null) {
+			seleniumDriver=new SeleniumDriver();
+		}
+	}
+	
+	public static void tearDown() {
+		
+		if(driver==null) {
+			driver.close();
+			driver.quit();
+		}
+		seleniumDriver=null;
+	}
 }
