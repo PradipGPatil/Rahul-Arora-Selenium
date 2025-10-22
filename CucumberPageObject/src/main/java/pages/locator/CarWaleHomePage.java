@@ -17,4 +17,6 @@ public class CarWaleHomePage {
 	
 	@FindBy(css="h2[data-skin=\"text\"]")
 	public WebElement pageTitleWebElement;
+	
+
 }
